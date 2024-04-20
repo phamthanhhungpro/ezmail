@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: "Montserrat";
+}
+
+#randomUserDisplaySection {
+    margin-top: -12rem;
+}
+
+.user-rounded-image {
+    border-radius: 100%;
+    margin-bottom: -4rem;
+    border: 4px solid gainsboro;
+}
+
+
+#displayUserInfo {
+    vertical-align: middle;
+
+}
+
+.temp-emailbox {
+    border-radius: 10px;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    border: 2px dashed #383b44;
+    border-image-source: url(../images/border-box.png);
+    border-image-slice: 2;
+    border-image-repeat: round;
+}
+
+.input-box-col {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.input-warp {
+    padding: 4px;
+    background-color: hsla(0, 0%, 100%, .04);
+    border-radius: 30px;
+    height: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 10000;
+}
+
+.emailbox-input {
+    border: 0;
+    font-family: Roboto, sans-serif !important;
+    background: transparent;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    color: #fff;
+    height: 52px;
+    min-width: 340px;
+}
+
+@media (max-width: 1199px) {
+    /* Your CSS code for this media query */
+    .temp-emailbox {
+        max-width: 556px;
+        margin: 0 auto;
+    }
+}
+
+*:focus {
+    outline: none;
+}
+
+.tm-content {
+    box-sizing: border-box;
+}
+
+.inboxWarpMain {
+    border: 1px solid #e5e5f0;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.inbox-header {
+    background-color: #22242b;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 65px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.bg-header {
+    background-color: #22242b;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    height: 65px;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.inbox-empty {
+    height: 335px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.inbox-empty-msg {
+    text-align: center;
+}
+
+.inboxWarpMain .inbox-header .col-h {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Roboto Mono, monospace !important;
+    text-transform: uppercase;
+}
+.inboxWarpMain .inbox-empty .inbox-empty-msg p.emptyInboxTitle {
+    color: #585d6a;
+    font-size: 20px;
+    font-family: Roboto Mono, monospace !important;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 20px 0 40px;
+    background-color: #f6f7f9;
+    position: relative;
+}
+
+.main-container {
+    width: 80% !important;
+    padding: 0 15px !important;
+    margin-left: auto;
+    margin-right: -50px;
+}
+
+.inbox-dataList {
+    border-radius: 0 0 10px 10px;
+    min-height: 333px;
+    padding-bottom: 3px;
+}
+
+.inbox-dataList ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.inbox-dataList ul li {
+    height: 70px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+.col-box {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    position: relative;
+    max-width: 40%;
+}
+
+.inbox-dataList .col-box {
+
+}
+.inbox-dataList .bullets-ico.is-active {
+    background-color: #00c099;
+}
+
+.inbox-dataList .bullets-ico {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: -16px;
+    top: 3px;
+    background-color: #e5e5f0;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+}
+
+.inboxSenderName, .inboxSubject {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif !important;
+    position: relative;
+    width: 100%;
+}
+
+.inboxSenderEllipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 92%;
+}
+
+.inbox-dataList .col-box span.inboxSenderEmail {
+    font-size: 14px;
+    color: #8c92a5;
+    margin: 0;
+    width: 100%;
+}
+
+.inbox-dataList .col-box .inboxSubject {
+    color: #585d6a;
+    word-wrap: break-word;
+}
+
+.inbox-dataList .col-box .inboxSenderName, .inbox-dataList .col-box .inboxSubject {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif !important;
+    position: relative;
+    width: 100%;
+}
+
+.inbox-dataList .col-box .attachment, .inbox-dataList .col-box .m-link-view {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    position: relative;
+    max-width: 50%;
+}
+
+.mess-content {
+    margin-top: 10px;
+    margin-left:30px;
+    margin-right:30px;
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disposable Email</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon1.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="header-inner-div col-md-12 text-center pb-1">
+                    <h2 class="fs-1 fw-normal text-uppercase">QuickInbox</h2>
+                    <p class="fw-lighter">QuickInbox offers a fleeting solution for your email needs, providing a
+                        temporary inbox for quick communication without the hassle of maintaining a permanent account.
+                        Say goodbye to clutter and hello to simplicity with our ephemeral email service.</p>
+
+                    <div class="temp-emailbox">
+                        <form>
+                            <div class="input-box-col">
+                                <div class="input-warp">
+                                    <input id="mail" type="text" class="emailbox-input" readonly="">
+                                    <button type="button" class="btn btn-outline-secondary" style="margin-right:20px"
+                                        onclick="copyToClipboard()">Copy</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="button-group mt-3">
+                        <button type="button" class="btn btn-outline-light m-2" onclick="refreshMailbox()"><i
+                                class="fa-solid fa-sync"></i> Refresh
+                            mailbox</button>
+                        <button type="button" class="btn btn-outline-light m-2" onclick="getNewEmail()"><i
+                                class="fa-solid fa-edit"></i> New
+                            email</button>
+                        <!-- <button type="button" class="btn btn-outline-light m-2" onclick="deleteMessage()"><i
+                                class="fa-solid fa-trash"></i>
+                            Delete</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container" id="mailbox">
+            <div class="row ">
+                <!-- Left banner block -->
+                <div class="col d-none d-sm-none hidden-xs-sm-md-lg visable-xl">
+                    <div class="ads-box ad-block-300X600 ad-block-left-300X600">
+                        <!-- TempMail_S2S_Sidebar_ROS_Pos1 -->
+                        <div id="bsa-zone_1594133221208-0_123456"></div>
+                    </div>
+                </div>
+                <!-- End Left banner block -->
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                    <div class="beforeContentBannerBl hidden-xs-sm">
+                        <div class="ads-box ad-block-728X90 ad-block-728X90-before-mail-block">
+                            <!-- TempMail_S2S_InContent_ROS_Pos1 -->
+                            <div id="bsa-zone_1594132707957-3_123456" data-google-query-id="" style="display: none;">
+                                <div id="google_ads_iframe_/8691100/TempMail_S2S_InContent_ROS_Pos1_0__container__"
+                                    style="border: 0pt none; margin: auto; text-align: center; width: 728px; height: 0px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tm-content">
+                        <div class="tm-content">
+                            <div class="inboxWarpMain">
+                                <div class="inbox-area maillist">
+                                    <div class="inbox-header hidden-xs-sm">
+                                        <div class="col-h">Sender</div>
+                                        <div class="col-h">Subject</div>
+                                        <div class="col-h">View</div>
+                                    </div>
+
+                                    <div class="inbox-empty" id="empty-box">
+                                        <div class="inbox-empty-msg">
+                                            <div class="spinner-border text-success" role="status"></div>
+                                            <p class="emptyInboxTitle">Your inbox is empty</p>
+                                            <p>Waiting for incoming emails</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="inbox-dataList">
+                                        <ul id="ul-message">
+                                            <!-- generated message here -->
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container" id="content" style="display:none">
+            <div class="row ">
+                <!-- Left banner block -->
+                <div class="col d-none d-sm-none hidden-xs-sm-md-lg visable-xl">
+                    <div class="ads-box ad-block-300X600 ad-block-left-300X600">
+                        <!-- TempMail_S2S_Sidebar_ROS_Pos1 -->
+                        <div id="bsa-zone_1594133221208-0_123456"></div>
+                    </div>
+                </div>
+                <!-- End Left banner block -->
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                    <div class="beforeContentBannerBl hidden-xs-sm">
+                        <div class="ads-box ad-block-728X90 ad-block-728X90-before-mail-block">
+                            <!-- TempMail_S2S_InContent_ROS_Pos1 -->
+                            <div id="bsa-zone_1594132707957-3_123456" data-google-query-id="" style="display: none;">
+                                <div id="google_ads_iframe_/8691100/TempMail_S2S_InContent_ROS_Pos1_0__container__"
+                                    style="border: 0pt none; margin: auto; text-align: center; width: 728px; height: 0px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tm-content">
+                        <div class="tm-content">
+                            <div class="inboxWarpMain">
+                                <div class="inbox-area maillist">
+                                    <div class="inbox-header hidden-xs-sm">
+                                        <div class="col-h">
+                                            <button class="btn btn-sm btn-success" onclick="backToList()">Back</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="inbox-dataList">
+                                        <div class="mess-content" id="mess-content">
+                                            <!-- <p>From: <span>Hung </span></p>
+                                            <hr>
+                                            <p>Subject: <span>Hung </span></p>
+                                            <hr> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark py-5">
+        <p class="text-white text-center mb-0">Copyright @ 2024. All Right Reserved Developed by hungpt</p>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="copiedToClipboardToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto text-success"><i class="fa-regular fa-clipboard me-2"></i>Copied to
+                    clipboard!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/cdf319e764.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        const endpointb = "http://localhost:3000/api/";
+        const getNewEmail = () => {
+            fetch(`${endpointb}new-email`)
+                .then(response => response.json())
+                .then(data => displayEmail(data))
+
+        }
+
+        // display generated email to the input box
+        const displayEmail = (data) => {
+            const email = data[0];
+            document.getElementById("mail").value = email;
+            refreshMailbox();
+        }
+
+        getNewEmail();
+
+        function copyToClipboard() {
+            const copyText = document.getElementById("mail").value;
+            if (copyText) {
+                navigator.clipboard.writeText(copyText).then(() => {
+                });
+                const copiedToClipboardToastTrigged = document.getElementById('copiedToClipboardToast')
+                const toast = new bootstrap.Toast(copiedToClipboardToastTrigged)
+                toast.show()
+            }
+        }
+
+        function refreshMailbox() {
+            const email = document.getElementById("mail").value;
+            if (email) {
+                // Add your code here to refresh the mailbox
+                fetch(`${endpointb}list-mail?email=${email}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Process the data and update the mailbox UI
+                        if (data.length > 0) {
+                            document.getElementById("empty-box").style.display = "none";
+                            let mailboxList = document.getElementById("ul-message");
+                            mailboxList.innerHTML = "";
+
+                            data.forEach(message => {
+                                let li = document.createElement("li");
+                                li.innerHTML = `
+                                    <div class="col-box">
+                                        <p>
+                                            <span class="bullets-ico is-active"></span>
+                                            <span class="inboxSenderEmail inboxSenderEllipsis">${message.from}</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-box">
+                                        <span class="inboxSubject subject-title">
+                                            <p>${message.subject}</p>
+                                        </span>
+                                    </div>
+                                    <div class="col-box">
+                                        <button class="btn btn-sm btn-outline-success" onclick="viewMessage(${message.id})">View</button>
+                                    </div>
+                                `;
+                                mailboxList.appendChild(li);
+                            });
+                        } else {
+                            //document.getElementById("empty-box").style.display = "block";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error refreshing mailbox:', error);
+                    });
+            }
+        }
+
+        function viewMessage(id) {
+            const email = document.getElementById("mail").value;
+
+            fetch(`${endpointb}mail/${id}?email=${email}`)
+                .then(response => response.json())
+                .then(data => {
+                    // show div id content and hide list message
+                    document.getElementById("content").style.display = "block";
+                    document.getElementById("mailbox").style.display = "none";
+
+                    // 
+                    document.getElementById("mess-content").innerHTML =
+                        `
+                    <p><small>From:</small> <span>${data.from}</span></p>
+                    <hr>
+                    <p><small>Subject</small>: <span>${data.subject}</span></p>
+                    <hr>
+                    ${data.htmlBody}
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error retrieving message:', error);
+                });
+        }
+
+        function backToList() {
+            refreshMailbox();
+            document.getElementById("content").style.display = "none";
+            document.getElementById("mailbox").style.display = "block";
+        }
+
+        setInterval(refreshMailbox, 15000);
+    </script>
+</body>
+
+</html>
