@@ -215,7 +215,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-        const endpointb = "https://ezmail-gamma.vercel.app/api/";
+        const endpointb = "http://localhost:3000/api/";
         const getNewEmail = () => {
             fetch(`${endpointb}new-email`)
                 .then(response => response.json())
