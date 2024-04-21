@@ -5,11 +5,6 @@ const port = 3000;
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
-
 const endpoint = "https://www.1secmail.com/api/v1/";
 
 // Define a route to handle requests for a new email
@@ -56,6 +51,10 @@ app.get('/api/mail/:id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+  });
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
