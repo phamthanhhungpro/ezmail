@@ -297,3 +297,41 @@ main {
     margin-left:30px;
     margin-right:30px;
 }
+
+.temp-emailbox-text {
+    text-align: center;
+    padding-top: 30px;
+    color: #7a7c80;
+    font-size: 14px;
+    font-family: Roboto Mono, monospace !important;
+    font-weight: 500;
+}
+.mid-intro-text {
+    text-align: center;
+    padding-top: 15px;
+    width: 60%;
+    margin: auto;
+}
+.mid-intro-text h1 {
+    font-size: 28px !important;
+    color: #22242b;
+    line-height: 1.2 !important;
+    margin-top: 20px !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 20px;
+}
+
+.bottom-seo-text {
+    padding-top: 15px;
+    width: 75%;
+    margin: auto;
+}
+
+.temp-emailbox-text1{
+    font-size: 20px !important;
+    color: #fff !important;
+    line-height: 100% !important;
+    margin-top: 0 !important;
+    padding-top: 0;
+    margin-bottom: 25px !important;
+}
