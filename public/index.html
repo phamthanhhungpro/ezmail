@@ -12,7 +12,24 @@
 </head>
 
 <body>
-    <header class="bg-dark text-white pt-5">
+    <header class="main-header">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col align-v-mid hidden-xs-sm">
+                    <div class="btn-appstore">
+                        <a href="https://itunes.apple.com/app/temp-mail-temporary-email/id1214259095" target="_blank" class="tm-btn btn-outline-dark">
+                            <img src="./assets/images/app-store.svg" width="20px" height="20px" alt="Temporary email app for Iphone and Ipad"> App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.tempmail" target="_blank" class="tm-btn btn-outline-dark">
+                            <img src="./assets/images/gplay.svg" width="20px" height="20px" alt="Temporary email app for Android"> Google Play</a>
+                    </div>
+                </div>
+                <div class="col align-v-mid align-content-right">
+                    <a href="https://temp-number.org/?ref=internal&amp;tap_s=2993986-50ade6" class="headerSeoLink" target="_blank">Temp Number 📲</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="bg-dark text-white">
         <div class="container">
             <div class="row pb-5">
                 <div class="header-inner-div col-md-12 text-center pb-1">
@@ -35,8 +52,7 @@
                                 class="fa-solid fa-sync"></i> Refresh
                             mailbox</button>
                         <button type="button" class="btn btn-outline-light m-2" onclick="getNewEmail()"><i
-                                class="fa-solid fa-edit"></i> New
-                            email</button>
+                                class="fa-solid fa-edit"></i> Generate Email</button>
                         <!-- <button type="button" class="btn btn-outline-light m-2" onclick="deleteMessage()"><i
                                 class="fa-solid fa-trash"></i>
                             Delete</button> -->
@@ -271,8 +287,54 @@
         </div>
     </main>
 
-    <footer class="bg-dark py-5">
-        <p class="text-white text-center mb-0">Copyright @ 2024. All Right Reserved Developed by hungpt</p>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-ms-12 col-md-12 col-lg-12">
+                    <div class="footer-box">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#" class="no-ajaxy goPremiumBtn">PREMIUM</a></li>
+                                <li><a href="/en/api" title="API">API</a></li>
+                                <li><a href="/blog" title="Articles" class="no-ajaxy">Articles</a></li>
+                                <li><a href="/en/10minutemail" title="10 MINUTE MAIL" class="no-ajaxy">10 MINUTE MAIL</a></li>
+                                <li><a href="/en/email-generator" title="Email Generator" class="no-ajaxy">Email Generator</a></li>
+                                <li><a href="/privacy-policy" title="Privacy">Privacy</a></li>
+                                <li><a href="/terms-of-service" title="Terms">Terms</a></li>
+                                <li><a href="/en/faq" title="FAQ">FAQ</a></li>
+                                <li><a href="/en/contact" title="Contacts">Contacts</a></li>
+                                <li><a href="https://orders.temp-mail.org" rel="nofollow" title="Advertising" target="_blank">Advertising</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="copyright-box">
+                        <div class="footer-btn-warp align-content-center">
+                            <div class="btn-appstore">
+                                <div class="btn-set-group">
+                                    <a href="https://itunes.apple.com/app/temp-mail-temporary-email/id1214259095" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary email app for Iphone and Ipad" class="lazy" src="./assets/images/app-store.svg"><span> App Store</span></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.tempmail" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary email app for Android" class="lazy" src="./assets/images/gplay.svg"><span> Google Play</span></a>
+                                    <a href="https://www.amazon.com/Temp-Mail-Temporary-Disposable-Email/dp/B08JQQF2H7/" target="_blank" class="tm-btn btn-dark amazonLink"><img width="30px" height="30px" alt="Temporary email app on Amazon" class="lazy" src="./assets/images/amazon.svg"></a>
+                                </div>
+                                <div class="btn-set-group bt-group-2">
+                                    <a href="https://chrome.google.com/webstore/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary email Extension for Chrome" class="lazy" src="./assets/images/chrome.svg"></a>
+                                    <a href="https://addons.mozilla.org/firefox/addon/temp-mail/" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary disposable email Add-on for Firefox" class="lazy" src="./assets/images/firefox.svg"></a>
+                                    <a href="https://privatix.slack.com/apps/A02CKESQ7KQ-temp-mail" target="_blank" rel="nofollow" class="tm-btn btn-dark"><img width="24px" height="24px" alt="Temp Mail Extension for Slack" class="lazy slackFooterIcon" src="./assets/images/slack.svg"></a>
+                                    <a href="https://t.me/TempMail_org_bot" target="_blank" rel="nofollow" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temp Mail Extension for Telegram" class="lazy" src="./assets/images/telegram.svg"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="language-dropdown">
+                            <div class="dropup langbox rcol1">
+                                <button type="button" style="display: contents;" class="lang-select">
+                                    <svg class="img-flag" style="width: 20px; height: 20px; margin-top: -2px; border-radius: 50%; margin-left: 3px; overflow: hidden; vertical-align: middle;"><use href="./assets/images/combined.svg#en"></use></svg>
+                                    <span class="lang-text">en</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3">

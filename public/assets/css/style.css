@@ -396,3 +396,233 @@ ul.populer-article-list li {
     padding-top: 18px;
     padding-bottom: 18px;
 }
+
+.page-footer, footer {
+    background-color: #22242b;
+    padding-top: 10px;
+    padding-bottom: 120px;
+    position: relative;
+  }
+.container {
+    width: 100% !important;
+    padding: 0 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.footer-nav ul li a {
+    color: #a7a7aa !important;
+    text-transform: uppercase;
+    font-family: Roboto Mono, monospace !important;
+    font-weight: 400;
+    font-size: 16px !important;
+    text-decoration: none !important;
+    padding: 5px 0 !important;
+}
+
+.footer-nav ul li a:hover {
+   color: #00c497 !important;
+}
+
+.btn-appstore .tm-btn, .btn-appstore a {
+    font-family: Roboto, sans-serif !important;
+    border-radius: 12px !important;
+    line-height: 20px !important;
+    text-decoration: none !important;
+    padding: .45rem 14px .45rem 10px !important;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.footer-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer-box {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.copyright-box {
+    padding-top: 30px;
+    border-top: 1px solid #393a41;
+    position: relative;
+}
+
+.footer-btn-warp .btn-set-group {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-btn-warp .btn-appstore .bt-group-2 a.tm-btn {
+    padding-right: 10px !important;
+}
+
+.footer-btn-warp .btn-appstore a.tm-btn {
+    font-size: 14px !important;
+    color: #fff !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    font-weight: 400 !important;
+}
+
+.align-content-center {
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .footer-btn-warp .btn-set-group {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .footer-btn-warp .btn-appstore a.tm-btn {
+    font-size: 14px !important;
+    color: #fff !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    font-weight: 400 !important;
+    padding-right: 14px !important;
+    display: inline-block;
+  }
+  .btn-appstore .tm-btn, .btn-appstore a {
+    font-family: Roboto, sans-serif !important;
+    border-radius: 12px !important;
+    line-height: 20px !important;
+    text-decoration: none !important;
+    padding: .45rem 14px .45rem 10px !important;
+  }
+  
+  .btn-dark {
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+  
+  .copyright-box .tm-btn.btn-dark>img {
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .btn-appstore .tm-btn img, .btn-appstore a img {
+    margin-right: 8px !important;
+  }
+  
+  .language-dropdown {
+    position: absolute;
+    top: 35px;
+    right: 0;
+  }
+  
+  .dropdown, .dropleft, .dropright, .dropup {
+    position: relative;
+  }
+  
+  .langbox .lang-select {
+    position: relative;
+    height: 38px;
+    background-color: hsla(0, 0%, 100%, .2);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: #fff;
+    line-height: 36px;
+    vertical-align: top;
+    padding-right: 25px;
+    width: 92px;
+    text-align: left;
+  }
+
+  .langbox .lang-select .lang-text {
+    color: #fff;
+    font-size: 14px !important;
+    padding: 0 9px 0 5px;
+    text-transform: uppercase;
+}
+.main-header {
+    background: #21232a url(images/header-bg.jpg) repeat 0 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+    padding: 20px 0;
+    left: 0;
+    top: 0;
+}
+
+.justify-content-md-center {
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.align-v-mid {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.btn-appstore .tm-btn, .btn-appstore a {
+    font-family: Roboto, sans-serif !important;
+    font-size: 12px !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+    border-radius: 12px !important;
+    line-height: 20px !important;
+    text-decoration: none !important;
+    padding: .45rem 14px .45rem 10px !important;
+}
+
+.btn-appstore .tm-btn img, .btn-appstore a img {
+    margin-right: 8px !important;
+}
+
+.align-content-right {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.headerSeoLink {
+    font-size: 14px !important;
+    padding: 8px 15px !important;
+    background: #2e3038 !important;
+    border-radius: 25px !important;
+    margin-right: 10px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.btn-outline-dark {
+    border: 1px solid #393c45;
+}
+
+.btn-appstore a:hover {
+    background-color: #57585a !important;
+    border-color: #57585a !important;
+}
+.headerSeoLink:hover {
+    background: #57585a !important;
+}
