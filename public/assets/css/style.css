@@ -67,7 +67,9 @@ body {
     position: relative;
     z-index: 10000;
 }
-
+select {
+	appearance: none;
+}
 .emailbox-input {
     border: 0;
     font-family: Roboto, sans-serif !important;
@@ -78,9 +80,24 @@ body {
     font-weight: 400 !important;
     color: #fff;
     height: 52px;
-    min-width: 340px;
+    min-width: 240px;
 }
-
+.domain-input {
+    align-items: center;
+    position: relative;
+    background-color: hsla(0, 0%, 100%, .04) !important;
+    border-radius: 30px;
+    height: 60px !important;
+    border: 0;
+    background: transparent;
+    font-family: Roboto, sans-serif !important;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    min-width: 140px;
+    color: coral;
+}
 @media (max-width: 1199px) {
     /* Your CSS code for this media query */
     .temp-emailbox {
@@ -626,3 +643,4 @@ ul.populer-article-list li {
 .headerSeoLink:hover {
     background: #57585a !important;
 }
+

@@ -18,11 +18,8 @@ app.get('/api/new-email', async (req, res) => {
         const response = await axios.get(`${endpoint}?action=genRandomMailbox`);
         if(1==1) {
             const [login, domain] = response.data[0].split('@');
-            var newEmail = `${login}@vjuum.com`;
 
-            //var newEmail = "7ftwlbc3@vjuum.com";
-
-            var arr = [newEmail];
+            var arr = [login];
             return res.json(arr);
         }
 
@@ -31,6 +28,7 @@ app.get('/api/new-email', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
 
 // get list mail in mailbox
 app.get('/api/list-mail', async (req, res) => {

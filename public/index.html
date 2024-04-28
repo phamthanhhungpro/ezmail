@@ -17,14 +17,19 @@
             <div class="row justify-content-md-center">
                 <div class="col align-v-mid hidden-xs-sm">
                     <div class="btn-appstore">
-                        <a href="https://itunes.apple.com/app/temp-mail-temporary-email/id1214259095" target="_blank" class="tm-btn btn-outline-dark">
-                            <img src="./assets/images/app-store.svg" width="20px" height="20px" alt="Temporary email app for Iphone and Ipad"> App Store</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.tempmail" target="_blank" class="tm-btn btn-outline-dark">
-                            <img src="./assets/images/gplay.svg" width="20px" height="20px" alt="Temporary email app for Android"> Google Play</a>
+                        <a href="https://itunes.apple.com/app/temp-mail-temporary-email/id1214259095" target="_blank"
+                            class="tm-btn btn-outline-dark">
+                            <img src="./assets/images/app-store.svg" width="20px" height="20px"
+                                alt="Temporary email app for Iphone and Ipad"> App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.tempmail" target="_blank"
+                            class="tm-btn btn-outline-dark">
+                            <img src="./assets/images/gplay.svg" width="20px" height="20px"
+                                alt="Temporary email app for Android"> Google Play</a>
                     </div>
                 </div>
                 <div class="col align-v-mid align-content-right">
-                    <a href="https://temp-number.org/?ref=internal&amp;tap_s=2993986-50ade6" class="headerSeoLink" target="_blank">Temp Number 📲</a>
+                    <a href="https://temp-number.org/?ref=internal&amp;tap_s=2993986-50ade6" class="headerSeoLink"
+                        target="_blank">Temp Number 📲</a>
                 </div>
             </div>
         </div>
@@ -39,23 +44,32 @@
                             <h2 class="temp-emailbox-text1">Your Temporary Email Address</h2>
                             <div class="input-box-col">
                                 <div class="input-warp">
-                                    <input id="mail" type="text" class="emailbox-input" readonly="">
-                                    <button type="button" class="btn btn-outline-secondary" style="margin-right:20px"
-                                        onclick="copyToClipboard()">Copy</button>
+                                    <input id="mail" type="text" class="emailbox-input">
                                 </div>
+                                <select class="domain-input" id="domain">
+                                    <option value="1secmail.com">@1secmail.com</option>
+                                    <option value="1secmail.org">@1secmail.org</option>
+                                    <option value="1secmail.net">@1secmail.net</option>
+                                    <option value="icznn.com">@icznn.com</option>
+                                    <option value="ezztt.com">@ezztt.com</option>
+                                    <option value="vjuum.com">@vjuum.com</option>
+                                    <option value="laafd.com">@laafd.com</option>
+                                    <option value="txcct.com">@txcct.com</option>
+                                </select>
+                                <p class="timer mt-3" style="margin-left: 20px;" id="timer"></p>
                             </div>
                         </form>
                     </div>
 
                     <div class="button-group mt-3">
+                        <button type="button" class="btn btn-outline-light m-2" onclick="copyToClipboard()"><i
+                                class="fa-solid fa-copy"></i>
+                            Save & Copy</button>
                         <button type="button" class="btn btn-outline-light m-2" onclick="refreshMailbox()"><i
                                 class="fa-solid fa-sync"></i> Refresh
                             mailbox</button>
                         <button type="button" class="btn btn-outline-light m-2" onclick="getNewEmail()"><i
                                 class="fa-solid fa-edit"></i> Generate Email</button>
-                        <!-- <button type="button" class="btn btn-outline-light m-2" onclick="deleteMessage()"><i
-                                class="fa-solid fa-trash"></i>
-                            Delete</button> -->
                     </div>
 
                     <div class="temp-emailbox-text">
@@ -158,10 +172,7 @@
 
                                     <div class="inbox-dataList">
                                         <div class="mess-content" id="mess-content">
-                                            <!-- <p>From: <span>Hung </span></p>
-                                            <hr>
-                                            <p>Subject: <span>Hung </span></p>
-                                            <hr> -->
+                                            <!-- message content goes here -->
                                         </div>
                                     </div>
                                 </div>
@@ -193,14 +204,7 @@
                             <h3>Popular Articles</h3>
                         </div>
                         <ul class="row populer-article-list" id="articles-list">
-                            <!-- <li class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                                <div class="inner-text-box">
-                                    <a href="/blog/temporary-email-with-private-domains-guide-2021/"
-                                        class="no-ajaxy">Private domains. How to get your own Temporary Email (2021)</a>
-                                    <p>How to create temporary email on your own private domain and how it helps you to
-                                        bypass common issues with registrations. </p>
-                                </div>
-                            </li> -->
+                            <!-- articles go here -->
                         </ul>
                     </div>
                 </div>
@@ -297,13 +301,16 @@
                                 <li><a href="#" class="no-ajaxy goPremiumBtn">PREMIUM</a></li>
                                 <li><a href="/en/api" title="API">API</a></li>
                                 <li><a href="/blog" title="Articles" class="no-ajaxy">Articles</a></li>
-                                <li><a href="/en/10minutemail" title="10 MINUTE MAIL" class="no-ajaxy">10 MINUTE MAIL</a></li>
-                                <li><a href="/en/email-generator" title="Email Generator" class="no-ajaxy">Email Generator</a></li>
+                                <li><a href="/en/10minutemail" title="10 MINUTE MAIL" class="no-ajaxy">10 MINUTE
+                                        MAIL</a></li>
+                                <li><a href="/en/email-generator" title="Email Generator" class="no-ajaxy">Email
+                                        Generator</a></li>
                                 <li><a href="/privacy-policy" title="Privacy">Privacy</a></li>
                                 <li><a href="/terms-of-service" title="Terms">Terms</a></li>
                                 <li><a href="/en/faq" title="FAQ">FAQ</a></li>
                                 <li><a href="/en/contact" title="Contacts">Contacts</a></li>
-                                <li><a href="https://orders.temp-mail.org" rel="nofollow" title="Advertising" target="_blank">Advertising</a></li>
+                                <li><a href="https://orders.temp-mail.org" rel="nofollow" title="Advertising"
+                                        target="_blank">Advertising</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -311,22 +318,46 @@
                         <div class="footer-btn-warp align-content-center">
                             <div class="btn-appstore">
                                 <div class="btn-set-group">
-                                    <a href="https://itunes.apple.com/app/temp-mail-temporary-email/id1214259095" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary email app for Iphone and Ipad" class="lazy" src="./assets/images/app-store.svg"><span> App Store</span></a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.tempmail" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary email app for Android" class="lazy" src="./assets/images/gplay.svg"><span> Google Play</span></a>
-                                    <a href="https://www.amazon.com/Temp-Mail-Temporary-Disposable-Email/dp/B08JQQF2H7/" target="_blank" class="tm-btn btn-dark amazonLink"><img width="30px" height="30px" alt="Temporary email app on Amazon" class="lazy" src="./assets/images/amazon.svg"></a>
+                                    <a href="https://itunes.apple.com/app/temp-mail-temporary-email/id1214259095"
+                                        target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px"
+                                            alt="Temporary email app for Iphone and Ipad" class="lazy"
+                                            src="./assets/images/app-store.svg"><span> App Store</span></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.tempmail" target="_blank"
+                                        class="tm-btn btn-dark"><img width="30px" height="30px"
+                                            alt="Temporary email app for Android" class="lazy"
+                                            src="./assets/images/gplay.svg"><span> Google Play</span></a>
+                                    <a href="https://www.amazon.com/Temp-Mail-Temporary-Disposable-Email/dp/B08JQQF2H7/"
+                                        target="_blank" class="tm-btn btn-dark amazonLink"><img width="30px"
+                                            height="30px" alt="Temporary email app on Amazon" class="lazy"
+                                            src="./assets/images/amazon.svg"></a>
                                 </div>
                                 <div class="btn-set-group bt-group-2">
-                                    <a href="https://chrome.google.com/webstore/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary email Extension for Chrome" class="lazy" src="./assets/images/chrome.svg"></a>
-                                    <a href="https://addons.mozilla.org/firefox/addon/temp-mail/" target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temporary disposable email Add-on for Firefox" class="lazy" src="./assets/images/firefox.svg"></a>
-                                    <a href="https://privatix.slack.com/apps/A02CKESQ7KQ-temp-mail" target="_blank" rel="nofollow" class="tm-btn btn-dark"><img width="24px" height="24px" alt="Temp Mail Extension for Slack" class="lazy slackFooterIcon" src="./assets/images/slack.svg"></a>
-                                    <a href="https://t.me/TempMail_org_bot" target="_blank" rel="nofollow" class="tm-btn btn-dark"><img width="30px" height="30px" alt="Temp Mail Extension for Telegram" class="lazy" src="./assets/images/telegram.svg"></a>
+                                    <a href="https://chrome.google.com/webstore/detail/temp-mail-disposable-temp/inojafojbhdpnehkhhfjalgjjobnhomj"
+                                        target="_blank" class="tm-btn btn-dark"><img width="30px" height="30px"
+                                            alt="Temporary email Extension for Chrome" class="lazy"
+                                            src="./assets/images/chrome.svg"></a>
+                                    <a href="https://addons.mozilla.org/firefox/addon/temp-mail/" target="_blank"
+                                        class="tm-btn btn-dark"><img width="30px" height="30px"
+                                            alt="Temporary disposable email Add-on for Firefox" class="lazy"
+                                            src="./assets/images/firefox.svg"></a>
+                                    <a href="https://privatix.slack.com/apps/A02CKESQ7KQ-temp-mail" target="_blank"
+                                        rel="nofollow" class="tm-btn btn-dark"><img width="24px" height="24px"
+                                            alt="Temp Mail Extension for Slack" class="lazy slackFooterIcon"
+                                            src="./assets/images/slack.svg"></a>
+                                    <a href="https://t.me/TempMail_org_bot" target="_blank" rel="nofollow"
+                                        class="tm-btn btn-dark"><img width="30px" height="30px"
+                                            alt="Temp Mail Extension for Telegram" class="lazy"
+                                            src="./assets/images/telegram.svg"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="language-dropdown">
                             <div class="dropup langbox rcol1">
                                 <button type="button" style="display: contents;" class="lang-select">
-                                    <svg class="img-flag" style="width: 20px; height: 20px; margin-top: -2px; border-radius: 50%; margin-left: 3px; overflow: hidden; vertical-align: middle;"><use href="./assets/images/combined.svg#en"></use></svg>
+                                    <svg class="img-flag"
+                                        style="width: 20px; height: 20px; margin-top: -2px; border-radius: 50%; margin-left: 3px; overflow: hidden; vertical-align: middle;">
+                                        <use href="./assets/images/combined.svg#en"></use>
+                                    </svg>
                                     <span class="lang-text">en</span>
                                 </button>
                             </div>
@@ -363,13 +394,17 @@
         const displayEmail = (data) => {
             const email = data[0];
             document.getElementById("mail").value = email;
+            document.getElementById("empty-box").style.display = "flex";
             refreshMailbox();
         }
 
         getNewEmail();
 
         function copyToClipboard() {
-            const copyText = document.getElementById("mail").value;
+            const username = document.getElementById("mail").value;
+            const domain = document.getElementById("domain").value;
+
+            let copyText = `${username}@${domain}`;
             if (copyText) {
                 navigator.clipboard.writeText(copyText).then(() => {
                 });
@@ -380,7 +415,10 @@
         }
 
         function refreshMailbox() {
-            const email = document.getElementById("mail").value;
+            const username = document.getElementById("mail").value;
+            const domain = document.getElementById("domain").value;
+
+            let email = `${username}@${domain}`;
             if (email) {
                 // Add your code here to refresh the mailbox
                 fetch(`${endpointb}list-mail?email=${email}`)
@@ -413,7 +451,7 @@
                                 mailboxList.appendChild(li);
                             });
                         } else {
-                            //document.getElementById("empty-box").style.display = "block";
+                            document.getElementById("empty-box").style.display = "flex";
                         }
                     })
                     .catch(error => {
@@ -423,7 +461,10 @@
         }
 
         function viewMessage(id) {
-            const email = document.getElementById("mail").value;
+            const username = document.getElementById("mail").value;
+            const domain = document.getElementById("domain").value;
+
+            let email = `${username}@${domain}`;
 
             fetch(`${endpointb}mail/${id}?email=${email}`)
                 .then(response => response.json())
@@ -462,22 +503,45 @@
                     let articlesList = document.getElementById("articles-list");
                     articlesList.innerHTML = "";
                     articles.forEach(item => {
-                                let li = document.createElement("li");
-                                li.classList.add("col-sm-12", "col-md-12", "col-lg-12", "col-xl-6");
-                                li.innerHTML = `
+                        let li = document.createElement("li");
+                        li.classList.add("col-sm-12", "col-md-12", "col-lg-12", "col-xl-6");
+                        li.innerHTML = `
                                 <div class="inner-text-box">
                                     <a href="/blog/${item.name}/"
                                         class="no-ajaxy">${item.title}</a>
                                     <p>${item.content}</p>
                                 </div>
                                 `;
-                                articlesList.appendChild(li);
-                            });
+                        articlesList.appendChild(li);
+                    });
                 })
                 .catch(error => {
                     console.error('Error fetching articles:', error);
                 });
         };
+
+        var countdownMinutes = 14;
+        var countdownSeconds = 59;
+
+        // Calculate the total countdown time in milliseconds
+        var countdownTime = (countdownMinutes * 60 + countdownSeconds) * 1000;
+        // Update the countdown every 1 second
+        var timer = setInterval(function () {
+            // Calculate the remaining time
+            countdownTime -= 1000;
+            // Calculate minutes and seconds
+            var minutes = Math.floor((countdownTime % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((countdownTime % (1000 * 60)) / 1000);
+
+            // Display the countdown in an element with id="timer"
+            document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a message
+            if (countdownTime < 0) {
+                location.reload();
+            }
+        }, 1000);
+
         fetchArticles();
         setInterval(refreshMailbox, 15000);
     </script>
