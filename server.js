@@ -2,6 +2,10 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 const port = 3000;
+const cors = require('cors');
+
+// Allow all origins
+app.use(cors());
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
