@@ -643,3 +643,13 @@ ul.populer-article-list li {
     background: #57585a !important;
 }
 
+.inboxWarpMain .inbox-header .col-h.small-h {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding-left: 0;
+    padding-right: 25px;
+    text-align: right;
+}

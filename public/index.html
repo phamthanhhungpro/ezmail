@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <a href="https://t.me/TempMail_org_bot" style="position: fixed; bottom: 0; right: 0; margin: 20px; z-index: 999; border-radius: 50%;" target="_blank" rel="nofollow" class="tm-btn btn-dark">
+        <img width="40px" height="40px" alt="Temp Mail Extension for Telegram" class="lazy" src="../assets/images/telegram.svg">
+    </a>
     <header class="main-header">
         <div class="container">
             <div class="row justify-content-md-center">
@@ -56,15 +59,15 @@
                                     <option value="laafd.com">@laafd.com</option>
                                     <option value="txcct.com">@txcct.com</option>
                                 </select>
+                                <button type="button" class="btn btn-outline-secondary" style="margin-left: 5px"
+                                        onclick="copyToClipboard()"><i
+                                        class="fa-solid fa-copy"></i> Copy</button>
                                 <p class="timer mt-3" style="margin-left: 20px;" id="timer"></p>
                             </div>
                         </form>
                     </div>
 
                     <div class="button-group mt-3">
-                        <button type="button" class="btn btn-outline-light m-2" onclick="copyToClipboard()"><i
-                                class="fa-solid fa-copy"></i>
-                            Save & Copy</button>
                         <button type="button" class="btn btn-outline-light m-2" onclick="refreshMailbox()"><i
                                 class="fa-solid fa-sync"></i> Refresh
                             mailbox</button>
@@ -84,7 +87,7 @@
     </header>
 
     <main>
-        <div class="main-container" id="mailbox">
+        <div id="mailbox">
             <div class="row ">
                 <!-- Left banner block -->
                 <div class="col d-none d-sm-none hidden-xs-sm-md-lg visable-xl">
@@ -112,7 +115,7 @@
                                     <div class="inbox-header hidden-xs-sm">
                                         <div class="col-h">Sender</div>
                                         <div class="col-h">Subject</div>
-                                        <div class="col-h">View</div>
+                                        <div class="col-h small-h">View</div>
                                     </div>
 
                                     <div class="inbox-empty" id="empty-box">
@@ -139,7 +142,7 @@
             </div>
         </div>
 
-        <div class="main-container" id="content" style="display:none">
+        <div id="content" style="display:none">
             <div class="row ">
                 <!-- Left banner block -->
                 <div class="col d-none d-sm-none hidden-xs-sm-md-lg visable-xl">
