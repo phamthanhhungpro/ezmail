@@ -32,10 +32,7 @@ body {
 }
 
 .input-box-col {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: ruby-text;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -557,7 +554,7 @@ ul.populer-article-list li {
     text-align: left;
   }
 
-  .langbox .lang-select .lang-text {
+.lang-text {
     color: #fff;
     font-size: 14px !important;
     padding: 0 9px 0 5px;

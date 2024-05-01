@@ -46,10 +46,10 @@
                         <form>
                             <h2 class="temp-emailbox-text1">Thông tin địa chỉ mail được cấp</h2>
                             <div class="input-box-col">
-                                <div class="input-warp">
+                                <div class="input-warp m-2">
                                     <input id="mail" type="text" class="emailbox-input">
                                 </div>
-                                <select class="domain-input" id="domain">
+                                <select class="domain-input m-2" id="domain">
                                     <option value="1secmail.com">@1secmail.com</option>
                                     <option value="1secmail.org">@1secmail.org</option>
                                     <option value="1secmail.net">@1secmail.net</option>
@@ -86,7 +86,7 @@
 
     <main>
         <div id="mailbox">
-            <div class="row ">
+            <div class="row" style="display: contents !important;">
                 <!-- Left banner block -->
                 <div class="col d-none d-sm-none hidden-xs-sm-md-lg visable-xl">
                     <div class="ads-box ad-block-300X600 ad-block-left-300X600">
@@ -141,7 +141,7 @@
         </div>
 
         <div id="content" style="display:none">
-            <div class="row ">
+            <div class="row" style="display: contents !important;">
                 <!-- Left banner block -->
                 <div class="col d-none d-sm-none hidden-xs-sm-md-lg visable-xl">
                     <div class="ads-box ad-block-300X600 ad-block-left-300X600">
@@ -347,25 +347,21 @@
                                         class="tm-btn btn-dark"><img width="30px" height="30px"
                                             alt="Temp Mail Extension for Telegram" class="lazy"
                                             src="../assets/images/telegram.svg"></a>
+                                    <button type="button" style="display: contents;" class="lang-select" onclick="changeLanguageEn()">
+                                        <svg class="img-flag"
+                                            style="width: 20px; height: 20px; margin-top: -2px; border-radius: 50%; margin-left: 3px; overflow: hidden; vertical-align: middle;">
+                                            <use href="../assets/images/combined.svg#en"></use>
+                                        </svg>
+                                        <span class="lang-text">en</span>
+                                    </button>
+                                    <button type="button" style="display: contents;" class="lang-select"">
+                                        <svg class="img-flag"
+                                            style="width: 20px; height: 20px; margin-top: -2px; border-radius: 50%; margin-left: 3px; overflow: hidden; vertical-align: middle;">
+                                            <use href="../assets/images/combined.svg#vi"></use>
+                                        </svg>
+                                        <span class="lang-text">vi</span>
+                                    </button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="language-dropdown">
-                            <div class="dropup langbox rcol1">
-                                <button type="button" style="display: contents;" class="lang-select" onclick="changeLanguageEn()">
-                                    <svg class="img-flag"
-                                        style="width: 20px; height: 20px; margin-top: -2px; border-radius: 50%; margin-left: 3px; overflow: hidden; vertical-align: middle;">
-                                        <use href="../assets/images/combined.svg#en"></use>
-                                    </svg>
-                                    <span class="lang-text">en</span>
-                                </button>
-                                <button type="button" style="display: contents;" class="lang-select">
-                                    <svg class="img-flag"
-                                        style="width: 20px; height: 20px; margin-top: -2px; border-radius: 50%; margin-left: 3px; overflow: hidden; vertical-align: middle;">
-                                        <use href="../assets/images/combined.svg#vi"></use>
-                                    </svg>
-                                    <span class="lang-text">vi</span>
-                                </button>
                             </div>
                         </div>
                     </div>
