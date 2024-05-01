@@ -650,3 +650,7 @@ ul.populer-article-list li {
     padding-right: 25px;
     text-align: right;
 }
+.btn-copy{
+    background-color: #00c497;
+    color: #ffffff;
+}
