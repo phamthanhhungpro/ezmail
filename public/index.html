@@ -13,7 +13,7 @@
 
 <body>
     <a href="https://t.me/TempMail_org_bot" style="position: fixed; bottom: 0; right: 0; margin: 20px; z-index: 999; border-radius: 50%;" target="_blank" rel="nofollow" class="tm-btn btn-dark">
-        <img width="40px" height="40px" alt="Temp Mail Extension for Telegram" class="lazy" src="../assets/images/telegram.svg">
+        <img width="60px" height="60px" alt="Temp Mail Extension for Telegram" class="lazy" src="../assets/images/telegram.svg">
     </a>
     <header class="main-header">
         <div class="container">
@@ -31,7 +31,8 @@
                     </div>
                 </div>
                 <div class="col align-v-mid align-content-center">
-                    <a href=""><img src="./assets/images/logo.png" style="width: 165px; height: 35px;"></a>
+                    <a href=""><img src="favicon1.png" style="width: 53px; height: 40px;"></a>
+                    <a href=""><img src="./assets/images/logo.png" style="width: 125px; height: 35px;"></a>
                 </div>
                 <div class="col align-v-mid align-content-right">
                     <a href="https://simforrent.com" class="headerSeoLink"
@@ -68,8 +69,9 @@
                                 <p class="timer mt-3" style="margin-left: 20px;" id="timer"></p>
                             </div>
                         </form>
+                        <span style="color: #00c497;" id="textSuccess">Successfully customized and copied the email</span>
                     </div>
-
+                   
                     <div class="button-group mt-3">
                         <button type="button" class="btn btn-outline-light m-2" onclick="refreshMailbox()"><i
                                 class="fa-solid fa-sync"></i> Refresh
@@ -404,6 +406,8 @@
         }
 
         function copyToClipboard() {
+            showTextSuccess();
+            setTimeout(hiddenTextSuccess, 3000)
             countdownTime = (countdownMinutes * 60 + countdownSeconds) * 1000;
             const username = document.getElementById("mail").value;
             const domain = document.getElementById("domain").value;
@@ -417,6 +421,16 @@
                 toast.show()
             }
         }
+
+        function hiddenTextSuccess() {
+            document.getElementById("textSuccess").style.display = "none";
+        }
+
+        function showTextSuccess() {
+            document.getElementById("textSuccess").style.display = "block";
+        }
+
+        hiddenTextSuccess();
 
         function refreshMailbox() {
             const username = document.getElementById("mail").value;
