@@ -654,3 +654,27 @@ ul.populer-article-list li {
     background-color: #00c497;
     color: #ffffff;
 }
+
+.inboxWarpMain svg .emptyInboxRotation {
+    -webkit-animation: rotation 2s linear infinite;
+    -o-animation: rotation 2s infinite linear;
+    animation: rotation 2s linear infinite;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+}
+
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
