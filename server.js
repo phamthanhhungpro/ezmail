@@ -3,6 +3,8 @@ const axios = require('axios');
 const app = express();
 const port = 3000;
 const cors = require('cors');
+const { initializeDatabase } = require('./db');
+const logRequest = require('./logger');
 
 // Allow all origins
 app.use(cors());
@@ -11,7 +13,7 @@ app.use(cors());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 const endpoint = "https://www.1secmail.com/api/v1/";
@@ -20,7 +22,7 @@ const endpoint = "https://www.1secmail.com/api/v1/";
 app.get('/api/new-email', async (req, res) => {
     try {
         const response = await axios.get(`${endpoint}?action=genRandomMailbox`);
-        if(1==1) {
+        if (1 == 1) {
             const [login, domain] = response.data[0].split('@');
 
             var arr = [login];
@@ -38,8 +40,17 @@ app.get('/api/new-email', async (req, res) => {
 app.get('/api/list-mail', async (req, res) => {
     try {
         const email = req.query.email;
+
         const [login, domain] = email.split('@');
         const response = await axios.get(`${endpoint}?action=getMessages&login=${login}&domain=${domain}`);
+
+        // Log the response
+        try {
+            await logRequest(req.ip, 'response', 'Nhận email', JSON.stringify(response.data));
+        } catch (error) {
+            console.error('Error logging request:', error);
+        }
+
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -52,13 +63,30 @@ app.get('/api/mail/:id', async (req, res) => {
         const email = req.query.email;
         const [login, domain] = email.split('@');
         const messageId = req.params.id;
+
+        // Log the request
+        try {
+            await logRequest(req.ip, 'request', 'Đọc nội dung tin nhắn', messageId);
+        } catch (error) {
+            console.error('Error logging request:', error);
+        }
         const response = await axios.get(`${endpoint}?action=readMessage&login=${login}&domain=${domain}&id=${messageId}`);
+
+        // Log the response
+        try {
+            await logRequest(req.ip, 'response', 'Nội dung tin nhắn', JSON.stringify(response.data));
+        } catch (error) {
+            console.error('Error logging request:', error);
+        }
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+initializeDatabase()
+    .finally(() => {
+        app.listen(port, () => {
+            console.log(`Server is running on port ${port}`);
+        });
+    });
