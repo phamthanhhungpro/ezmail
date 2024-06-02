@@ -37,6 +37,25 @@ const MailLog = sequelize.define('MailLog', {
     timestamps: false,
 });
 
+const MailVisitorLog = sequelize.define('MailVisitorLog', {
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+    ipAddress: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    visitDate: {
+        type: DataTypes.DATEONLY,
+        allowNull: false,
+    },
+}, {
+    tableName: 'MailVisitorLog',
+    timestamps: false,
+});
+
 const fs = require('fs');
 const path = require('path');
 
@@ -57,10 +76,11 @@ const initializeDatabase = async () => {
         await sequelize.authenticate();
         appendToFile(`Connection to PostgreSQL has been established successfully.`);
         await MailLog.sync({ alter: true });
-        console.log('MailLog table has been synchronized.');
+        await MailVisitorLog.sync({ alter: true });
+        console.log('Table has been synchronized.');
     } catch (error) {
-        appendToFile('Unable to connect to the database or synchronize the table:', error.message);
+        appendToFile(`Error connect db: ${error}`);
     }
 };
 
-module.exports = { sequelize, MailLog, initializeDatabase };
+module.exports = { sequelize, MailLog, MailVisitorLog, initializeDatabase };
